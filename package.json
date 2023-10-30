@@ -1,7 +1,24 @@
 {
-  "name": "mds",
-  "version": "0.1.0",
-  "private": true,
+  "name": "movester-design-system",
+  "version": "1.0.0",
+  "private": false,
+  "browser": "./browser/specific/main.js",
+  "description": "UI library for react and typescript",
+  "keywords": [
+    "react",
+    "typescript",
+    "UI"
+  ],
+  "author": {
+    "name": "chloe kim",
+    "email": "grace97041292@gmail.com",
+    "url": "https://github.com/chloe41297"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/movester/movester-design-system"
+  },
+  "main": "dist/lib/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -21,9 +38,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "clean": "rm -rf dist",
     "build": "react-scripts build",
+    "prepare": "rm -rf dist && mkdir dist && tsc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tsc-build": "tsc -p tsconfig.json",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +66,8 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
-    "@babel/preset-react": "^7.22.15"
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "cross-env": "^7.0.3"
   }
 }

@@ -3,6 +3,7 @@ import Typography from "./Typography";
 import { PropsWithChildren } from "react";
 import { colors } from "../constants/style";
 import { ImCheckmark } from "react-icons/im";
+import React from "react";
 
 interface IProps {
   isChecked: boolean;

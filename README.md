@@ -1,48 +1,154 @@
-# Getting Started with Create React App
+# Movester-Design-System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Design system and UI library for react and typescript projects.
+Simple and modern styeld design is implented.
+Focused on very basic components but will be imporved continuously.
 
-## Available Scripts
+# installation
 
-In the project directory, you can run:
+```
+npm i movester-design-system
+```
 
-### `npm start`
+# Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Box
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**props**
 
-### `npm test`
+| prop name           | nullable | type          |
+| ------------------- | -------- | ------------- |
+| flexDirection       | true     | column        |
+|                     |          | row           |
+| gap                 | true     | number        |
+| justifyContent      | true     | center        |
+|                     |          | start         |
+|                     |          | end           |
+|                     |          | space-between |
+| alignItems          | true     | center        |
+|                     |          | start         |
+|                     |          | end           |
+| padding             | true     | number        |
+|                     |          | string        |
+| width               | true     | number        |
+|                     |          | string        |
+| height              | true     | number        |
+|                     |          | string        |
+| display             | true     | flex          |
+|                     |          | block         |
+|                     |          | inline        |
+|                     |          | grid          |
+| overflow            | true     | scroll        |
+|                     |          | hidden        |
+| backgroundColor     | true     | string        |
+| border              | true     | string        |
+| borderRadius        | true     | number        |
+| gridTemplateColumns | true     | string        |
+| boxShadow           | true     | string        |
+| onClick             | true     | ()⇒void       |
+| onMouseOver         | true     | ()⇒void       |
+| ref                 | true     | any           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Button
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**props**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| prop name | nullable | type      |
+| --------- | -------- | --------- |
+| variants  | true     | primary   |
+|           |          | secondary |
+| size      | false    | xs        |
+|           |          | sm        |
+|           |          | md        |
+|           |          | lg        |
+| disabled  | true     | boolean   |
+| width     | true     | number    |
+| onClick   | true     | () ⇒ void |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Check Box
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**props**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| prop name    | nullable | type                                          |
+| ------------ | -------- | --------------------------------------------- |
+| isChecked    | false    | boolean                                       |
+| setIsChecked | false    | React.Dispatch<React.SetStateAction<boolean>> |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Chip
 
-## Learn More
+**props**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| prop name | nullable | type              |
+| --------- | -------- | ----------------- |
+| variants  | true     | primary (default) |
+|           |          | secondary         |
+| size      | false    | sm                |
+|           |          | md (default)      |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# movester-design-system
-# movester-design-system
+---
+
+## Combo Box
+
+**props**
+
+| prop name | nullable | type                                                   |
+| --------- | -------- | ------------------------------------------------------ |
+| list      | false    | { name: string; id: string }[]                         |
+| value     | false    | { name: string; id: string }                           |
+| setValue  | false    | Dispatch<SetStateAction<{ name: string; id: string }>> |
+| size      | false    | xs                                                     |
+|           |          | sm                                                     |
+|           |          | md                                                     |
+| disabled  | true     | boolean                                                |
+| lable     | true     | string                                                 |
+
+---
+
+## Divider
+
+**props**
+
+| prop name | nullable | type   |
+| --------- | -------- | ------ |
+| color     | true     | string |
+
+## Input
+
+**props**
+
+| prop name   | nullable | type                                           |
+| ----------- | -------- | ---------------------------------------------- |
+| value       | false    | string                                         |
+|             |          | number                                         |
+| setValue    | false    | (e:React.ChangeEvent<HTMLInputElement>) ⇒ void |
+| placeholder | true     | string                                         |
+| invisible   | true     | boolean                                        |
+| onClear     | true     | ()⇒void                                        |
+
+---
+
+## Typography
+
+**props**
+
+| prop name | nullable | type            |
+| --------- | -------- | --------------- |
+| variants  | true     | title1          |
+|           |          | heading1        |
+|           |          | heading2        |
+|           |          | heading3        |
+|           |          | body1           |
+|           |          | body2 (default) |
+|           |          | body3           |
+|           |          | caption         |
+| colors    | true     | string          |
+
+# related Projects
+
+- [mymovester project](https://github.com/movester/mymovester-client-product)

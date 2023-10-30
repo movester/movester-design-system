@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 import { AiOutlineCheck, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { colors } from "../constants/style";
 import { sizesType } from "../constants/types";
+import React from "react";
 
 interface IProps {
   list: { name: string; id: string }[];
