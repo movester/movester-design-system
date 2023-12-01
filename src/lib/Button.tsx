@@ -93,13 +93,14 @@ const Button = (props: PropsWithChildren<IProps>) => {
 
 export default Button;
 
-const Box = styled.div<IButton>`
+const Box = styled.button<IButton>`
   border-radius: 8px;
   justify-content: center;
   align-items: center;
   text-align: center;
   display: flex;
   font-weight: bold;
+  outline: none;
   width: ${(props) => (props.$width ? `${props.$width}px` : "100%")};
   box-sizing: border-box;
   background-color: ${(props) => props.$backgroundColor};
@@ -108,7 +109,4 @@ const Box = styled.div<IButton>`
   font-size: ${(props) => `${props.$fontSize}px`};
   border: ${(props) => `${props.$border}}`};
   opacity: ${(props) => (props.$disabled ? 0.6 : 1)};
-  :hover {
-    cursor: pointer;
-  }
 `;
