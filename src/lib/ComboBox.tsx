@@ -73,9 +73,9 @@ const ComboBox = (props: IProps) => {
       >
         <Span>{value && value.id ? value.name : label}</Span>
         {isOpend ? (
-          <AiOutlineUp size={8}></AiOutlineUp>
+          <AiOutlineUp size={variants[size].fontSize}></AiOutlineUp>
         ) : (
-          <AiOutlineDown size={8}></AiOutlineDown>
+          <AiOutlineDown size={variants[size].fontSize}></AiOutlineDown>
         )}
       </Select>
 
@@ -93,7 +93,9 @@ const ComboBox = (props: IProps) => {
             >
               {value && value.id === item.id && (
                 <span style={{ paddingRight: "8px" }}>
-                  <AiOutlineCheck size={10}></AiOutlineCheck>
+                  <AiOutlineCheck
+                    size={variants[size].fontSize}
+                  ></AiOutlineCheck>
                 </span>
               )}
               {item.name}
@@ -140,11 +142,10 @@ const OptionWarpper = styled.div`
   position: absolute;
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
-  border: 1px solid ${colors.g000};
+  box-shadow: 0 0 0 1px ${colors.g000} inset;
   border-top: none;
   background-color: ${colors.f000};
   z-index: 20;
-
   :hover {
     background-color: ${colors.softPrimaryColor};
     color: #ffffff;
@@ -159,5 +160,8 @@ const Option = styled.div<IComboBox>`
   width: 100%;
   border-bottom: 1px solid ${colors.g000};
   font-size: ${({ $fontSize }) => `${$fontSize}px`};
-  padding: ${({ $padding }) => `${$padding}px`};
+  padding: ${({ $padding }) => `${$padding}`};
+  display: flex;
+  align-items: center;
+  justify-content: start;
 `;
