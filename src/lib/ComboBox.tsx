@@ -140,11 +140,10 @@ const OptionWarpper = styled.div`
   position: absolute;
   border-radius: 0px 0px 8px 8px;
   overflow: hidden;
-  border: 1px solid ${colors.g000};
+  box-shadow: 0 0 0 1px ${colors.g000} inset;
   border-top: none;
   background-color: ${colors.f000};
   z-index: 20;
-
   :hover {
     background-color: ${colors.softPrimaryColor};
     color: #ffffff;
@@ -159,5 +158,8 @@ const Option = styled.div<IComboBox>`
   width: 100%;
   border-bottom: 1px solid ${colors.g000};
   font-size: ${({ $fontSize }) => `${$fontSize}px`};
-  padding: ${({ $padding }) => `${$padding}px`};
+  padding: ${({ $padding }) => `${$padding}`};
+  display: flex;
+  align-items: center;
+  justify-content: start;
 `;
