@@ -93,7 +93,9 @@ const ComboBox = (props: IProps) => {
             >
               {value && value.id === item.id && (
                 <span style={{ paddingRight: "8px" }}>
-                  <AiOutlineCheck size={10}></AiOutlineCheck>
+                  <AiOutlineCheck
+                    size={variants[size].fontSize}
+                  ></AiOutlineCheck>
                 </span>
               )}
               {item.name}
