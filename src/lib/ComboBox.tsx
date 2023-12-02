@@ -73,9 +73,9 @@ const ComboBox = (props: IProps) => {
       >
         <Span>{value && value.id ? value.name : label}</Span>
         {isOpend ? (
-          <AiOutlineUp size={8}></AiOutlineUp>
+          <AiOutlineUp size={variants[size].fontSize}></AiOutlineUp>
         ) : (
-          <AiOutlineDown size={8}></AiOutlineDown>
+          <AiOutlineDown size={variants[size].fontSize}></AiOutlineDown>
         )}
       </Select>
 
