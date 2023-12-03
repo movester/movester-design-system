@@ -6,5 +6,16 @@ import ComboBox from "./ComboBox";
 import Divider from "./Divder";
 import Input from "./Input";
 import Typography from "./Typography";
+import Radio from "./Radio";
 
-export { Box, Button, CheckBox, Chip, ComboBox, Divider, Input, Typography };
+export {
+  Box,
+  Button,
+  CheckBox,
+  Chip,
+  ComboBox,
+  Divider,
+  Input,
+  Typography,
+  Radio,
+};
