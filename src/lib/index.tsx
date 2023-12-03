@@ -7,6 +7,7 @@ import Divider from "./Divder";
 import Input from "./Input";
 import Typography from "./Typography";
 import Radio from "./Radio";
+import Textarea from "./Textarea";
 
 export {
   Box,
@@ -18,4 +19,5 @@ export {
   Input,
   Typography,
   Radio,
+  Textarea,
 };
