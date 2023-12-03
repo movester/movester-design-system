@@ -31,7 +31,7 @@ const variantsColors: {
   primary: {
     backgroundColor: colors.softPrimaryColor,
     textColor: colors.f000,
-    borderColor: "transaparent",
+    borderColor: colors.softPrimaryColor,
   },
   secondary: {
     backgroundColor: colors.f000,
@@ -75,7 +75,7 @@ const Button = (props: PropsWithChildren<IProps>) => {
   } = props;
 
   return (
-    <Box
+    <ButtonComponent
       $backgroundColor={variantsColors[variants].backgroundColor}
       $color={variantsColors[variants].textColor}
       $border={`2px solid ${variantsColors[variants].borderColor}`}
@@ -87,13 +87,16 @@ const Button = (props: PropsWithChildren<IProps>) => {
       className="ButtonComponent"
     >
       {children ? children : "확인"}
-    </Box>
+    </ButtonComponent>
   );
 };
 
 export default Button;
 
-const Box = styled.button<IButton>`
+const ButtonComponent = styled.button<IButton>`
+  &:hover {
+    cursor: pointer;
+  }
   border-radius: 8px;
   justify-content: center;
   align-items: center;
