@@ -1,18 +1,8 @@
 import React from "react";
 import "./App.css";
-import { Button } from "./lib";
 
 function App() {
-  return (
-    <div className="App">
-      <Button size="xs" variants="primary">
-        ddddd
-      </Button>
-      <Button size="xs" variants="secondary">
-        ddddd
-      </Button>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
