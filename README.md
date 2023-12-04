@@ -8,7 +8,51 @@ Focused on very basic components but will be imporved continuously.
 
 ```
 npm i movester-design-system
+
 ```
+
+# Version Info
+
+- `1.1.0` 2023-12-4
+
+  ### [추가]
+
+  ### Radio
+
+  **props**
+
+  | prop name    | nullable | type                                          |
+  | ------------ | -------- | --------------------------------------------- |
+  | isChecked    | false    | boolean                                       |
+  | setIsChecked | false    | React.Dispatch<React.SetStateAction<boolean>> |
+  | children     | true     | children                                      |
+
+  ***
+
+  ### Textarea
+
+  **props**
+
+  | prop name    | nullable | type                                          |
+  | ------------ | -------- | --------------------------------------------- |
+  | isChecked    | false    | boolean                                       |
+  | setIsChecked | false    | React.Dispatch<React.SetStateAction<boolean>> |
+
+  ***
+
+  ### [수정]
+
+  ### Button
+
+  - hover 시 cursor pointer 로 변하게 수정
+  - div tag 로 구성되어있던 컴포넌트 button tag로 수정
+
+  ### ComboBox
+
+  - option box 높이 조정
+
+- `1.0.0` 2023-11
+  - 아래 컴포넌트들 추가
 
 # Components
 
@@ -148,6 +192,25 @@ npm i movester-design-system
 |           |          | body3           |
 |           |          | caption         |
 | colors    | true     | string          |
+
+### Radio
+
+**props**
+| prop name | nullable | type |
+| --- | --- | --- |
+| isChecked | false | boolean |
+| setIsChecked | false | React.Dispatch<React.SetStateAction<boolean>> |
+| children | true | children |
+
+    ---
+
+### Textarea
+
+**props**
+| prop name | nullable | type |
+| --- | --- | --- |
+| isChecked | false | boolean |
+| setIsChecked | false | React.Dispatch<React.SetStateAction<boolean>> |
 
 # related Projects
 
