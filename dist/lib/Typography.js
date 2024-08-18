@@ -38,11 +38,11 @@ var variantsProperties = {
         fontWeight: 500,
     },
     body3: {
-        fontSize: 8,
+        fontSize: 12,
         fontWeight: 500,
     },
     caption: {
-        fontSize: 8,
+        fontSize: 10,
         fontWeight: 500,
     },
 };
