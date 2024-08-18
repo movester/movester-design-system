@@ -1,8 +1,8 @@
 # Movester-Design-System
 
 Design system and UI library for react and typescript projects.
-Simple and modern styeld design is implented.
-Focused on very basic components but will be imporved continuously.
+Simple and modern styeld design is implanted.
+Focused on very basic components but will be improved continuously.
 
 # installation
 
@@ -12,6 +12,14 @@ npm i movester-design-system
 ```
 
 # Version Info
+
+- `1.1.2` 2024-8-18
+
+* Typography "body3" , "caption" font-size 변경
+
+- `1.1.1` 2024-8-18
+
+* ComboBox "xs" font-size 변경
 
 - `1.1.0` 2023-12-4
 
