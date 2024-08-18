@@ -1,10 +1,8 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { styled } from "styled-components";
-
 import { AiOutlineCheck, AiOutlineDown, AiOutlineUp } from "react-icons/ai";
 import { colors } from "../constants/style";
 import { sizesType } from "../constants/types";
-import React from "react";
 
 interface IProps {
   list: { name: string; id: string }[];
@@ -27,18 +25,18 @@ interface IComboBox {
 
 const variants = {
   xs: {
-    fontSize: 8,
-    padding: "4px 8px",
+    fontSize: 12,
+    padding: "0px 12px",
     height: 32,
   },
   sm: {
     fontSize: 16,
-    padding: "8px 16px",
-    height: 48,
+    padding: "4px 16px",
+    height: 40,
   },
   md: {
     fontSize: 24,
-    padding: "16px 32px",
+    padding: "8px 24px",
     height: 48,
   },
 };
@@ -53,7 +51,7 @@ const ComboBox = (props: IProps) => {
     label = "선택",
   } = props;
 
-  const [isOpend, setIsOpened] = useState(false);
+  const [isOpened, setIsOpened] = useState(false);
 
   return (
     <Box>
@@ -67,19 +65,19 @@ const ComboBox = (props: IProps) => {
         $fontSize={variants[size].fontSize}
         $padding={variants[size].padding}
         $height={variants[size].height}
-        $borderRadius={isOpend ? "8px 8px 0px 0px" : "8px"}
+        $borderRadius={isOpened ? "8px 8px 0px 0px" : "8px"}
         $opacity={disabled ? 0.5 : 1}
         onClick={() => !disabled && setIsOpened((prev) => !prev)}
       >
         <Span>{value && value.id ? value.name : label}</Span>
-        {isOpend ? (
+        {isOpened ? (
           <AiOutlineUp size={variants[size].fontSize}></AiOutlineUp>
         ) : (
           <AiOutlineDown size={variants[size].fontSize}></AiOutlineDown>
         )}
       </Select>
 
-      {isOpend && (
+      {isOpened && (
         <OptionWarpper>
           {list.map((item) => (
             <Option
@@ -90,6 +88,7 @@ const ComboBox = (props: IProps) => {
               }}
               $fontSize={variants[size].fontSize}
               $padding={variants[size].padding}
+              $height={variants[size].height}
             >
               {value && value.id === item.id && (
                 <span style={{ paddingRight: "8px" }}>
@@ -158,6 +157,7 @@ const OptionWarpper = styled.div`
 
 const Option = styled.div<IComboBox>`
   width: 100%;
+  height: ${({ $height }) => `${$height}px`};
   border-bottom: 1px solid ${colors.g000};
   font-size: ${({ $fontSize }) => `${$fontSize}px`};
   padding: ${({ $padding }) => `${$padding}`};
