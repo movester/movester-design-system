@@ -42,7 +42,7 @@ var variantsProperties = {
         fontWeight: 500,
     },
     caption: {
-        fontSize: 4,
+        fontSize: 8,
         fontWeight: 500,
     },
 };

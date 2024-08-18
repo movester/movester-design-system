@@ -1,6 +1,6 @@
 {
   "name": "movester-design-system",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "browser": "./browser/specific/main.js",
   "description": "UI library for react and typescript",
@@ -69,6 +69,8 @@
     "@babel/preset-env": "^7.23.2",
     "@babel/preset-react": "^7.22.15",
     "babel-plugin-styled-components": "^2.1.4",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }

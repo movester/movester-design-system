@@ -22,30 +22,30 @@ var ai_1 = require("react-icons/ai");
 var style_1 = require("../constants/style");
 var variants = {
     xs: {
-        fontSize: 8,
-        padding: "4px 8px",
+        fontSize: 12,
+        padding: "0px 12px",
         height: 32,
     },
     sm: {
         fontSize: 16,
-        padding: "8px 16px",
-        height: 48,
+        padding: "4px 16px",
+        height: 40,
     },
     md: {
         fontSize: 24,
-        padding: "16px 32px",
+        padding: "8px 24px",
         height: 48,
     },
 };
 var ComboBox = function (props) {
     var list = props.list, value = props.value, setValue = props.setValue, size = props.size, _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.label, label = _b === void 0 ? "선택" : _b;
-    var _c = (0, react_1.useState)(false), isOpend = _c[0], setIsOpened = _c[1];
+    var _c = (0, react_1.useState)(false), isOpened = _c[0], setIsOpened = _c[1];
     return ((0, jsx_runtime_1.jsxs)(Box, { children: [(0, jsx_runtime_1.jsxs)(Select, __assign({ "$border": value
                     ? "1px solid ".concat(style_1.colors.vividPrimaryColor, " ")
-                    : "1px solid ".concat(style_1.colors.g000), "$color": value ? " ".concat(style_1.colors.vividPrimaryColor, " ") : "".concat(style_1.colors.g100), "$fontSize": variants[size].fontSize, "$padding": variants[size].padding, "$height": variants[size].height, "$borderRadius": isOpend ? "8px 8px 0px 0px" : "8px", "$opacity": disabled ? 0.5 : 1, onClick: function () { return !disabled && setIsOpened(function (prev) { return !prev; }); } }, { children: [(0, jsx_runtime_1.jsx)(Span, { children: value && value.id ? value.name : label }), isOpend ? ((0, jsx_runtime_1.jsx)(ai_1.AiOutlineUp, { size: variants[size].fontSize })) : ((0, jsx_runtime_1.jsx)(ai_1.AiOutlineDown, { size: variants[size].fontSize }))] })), isOpend && ((0, jsx_runtime_1.jsx)(OptionWarpper, { children: list.map(function (item) { return ((0, jsx_runtime_1.jsxs)(Option, __assign({ onClick: function () {
+                    : "1px solid ".concat(style_1.colors.g000), "$color": value ? " ".concat(style_1.colors.vividPrimaryColor, " ") : "".concat(style_1.colors.g100), "$fontSize": variants[size].fontSize, "$padding": variants[size].padding, "$height": variants[size].height, "$borderRadius": isOpened ? "8px 8px 0px 0px" : "8px", "$opacity": disabled ? 0.5 : 1, onClick: function () { return !disabled && setIsOpened(function (prev) { return !prev; }); } }, { children: [(0, jsx_runtime_1.jsx)(Span, { children: value && value.id ? value.name : label }), isOpened ? ((0, jsx_runtime_1.jsx)(ai_1.AiOutlineUp, { size: variants[size].fontSize })) : ((0, jsx_runtime_1.jsx)(ai_1.AiOutlineDown, { size: variants[size].fontSize }))] })), isOpened && ((0, jsx_runtime_1.jsx)(OptionWarpper, { children: list.map(function (item) { return ((0, jsx_runtime_1.jsxs)(Option, __assign({ onClick: function () {
                         setValue(item);
                         setIsOpened(function (prev) { return !prev; });
-                    }, "$fontSize": variants[size].fontSize, "$padding": variants[size].padding }, { children: [value && value.id === item.id && ((0, jsx_runtime_1.jsx)("span", __assign({ style: { paddingRight: "8px" } }, { children: (0, jsx_runtime_1.jsx)(ai_1.AiOutlineCheck, { size: variants[size].fontSize }) }))), item.name] }), "combBox -" + item.name + "-" + item.id)); }) }))] }));
+                    }, "$fontSize": variants[size].fontSize, "$padding": variants[size].padding, "$height": variants[size].height }, { children: [value && value.id === item.id && ((0, jsx_runtime_1.jsx)("span", __assign({ style: { paddingRight: "8px" } }, { children: (0, jsx_runtime_1.jsx)(ai_1.AiOutlineCheck, { size: variants[size].fontSize }) }))), item.name] }), "combBox -" + item.name + "-" + item.id)); }) }))] }));
 };
 exports.default = ComboBox;
 var Box = styled_components_1.styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: relative;\n  width: fit-content;\n"], ["\n  position: relative;\n  width: fit-content;\n"])));
@@ -73,7 +73,10 @@ var Select = styled_components_1.styled.div(templateObject_2 || (templateObject_
 });
 var Span = styled_components_1.styled.span(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  padding-right: 32px;\n"], ["\n  padding-right: 32px;\n"])));
 var OptionWarpper = styled_components_1.styled.div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  width: 100%;\n  position: absolute;\n  border-radius: 0px 0px 8px 8px;\n  overflow: hidden;\n  box-shadow: 0 0 0 1px ", " inset;\n  border-top: none;\n  background-color: ", ";\n  z-index: 20;\n  :hover {\n    background-color: ", ";\n    color: #ffffff;\n    border-color: ", ";\n  }\n  :last-child {\n    border: none;\n  }\n"], ["\n  width: 100%;\n  position: absolute;\n  border-radius: 0px 0px 8px 8px;\n  overflow: hidden;\n  box-shadow: 0 0 0 1px ", " inset;\n  border-top: none;\n  background-color: ", ";\n  z-index: 20;\n  :hover {\n    background-color: ", ";\n    color: #ffffff;\n    border-color: ", ";\n  }\n  :last-child {\n    border: none;\n  }\n"])), style_1.colors.g000, style_1.colors.f000, style_1.colors.softPrimaryColor, style_1.colors.softPrimaryColor);
-var Option = styled_components_1.styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  width: 100%;\n  border-bottom: 1px solid ", ";\n  font-size: ", ";\n  padding: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: start;\n"], ["\n  width: 100%;\n  border-bottom: 1px solid ", ";\n  font-size: ", ";\n  padding: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: start;\n"])), style_1.colors.g000, function (_a) {
+var Option = styled_components_1.styled.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  width: 100%;\n  height: ", ";\n  border-bottom: 1px solid ", ";\n  font-size: ", ";\n  padding: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: start;\n"], ["\n  width: 100%;\n  height: ", ";\n  border-bottom: 1px solid ", ";\n  font-size: ", ";\n  padding: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: start;\n"])), function (_a) {
+    var $height = _a.$height;
+    return "".concat($height, "px");
+}, style_1.colors.g000, function (_a) {
     var $fontSize = _a.$fontSize;
     return "".concat($fontSize, "px");
 }, function (_a) {
