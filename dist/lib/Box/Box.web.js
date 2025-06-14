@@ -17,11 +17,6 @@ var __assign = (this && this.__assign) || function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var jsx_runtime_1 = require("react/jsx-runtime");
 var styled_components_1 = require("styled-components");
-var Box = function (props) {
-    var children = props.children, flexDirection = props.flexDirection, _a = props.gap, gap = _a === void 0 ? 0 : _a, justifyContent = props.justifyContent, alignItems = props.alignItems, _b = props.padding, padding = _b === void 0 ? 0 : _b, width = props.width, _c = props.height, height = _c === void 0 ? "100%" : _c, display = props.display, overflow = props.overflow, backgroundColor = props.backgroundColor, border = props.border, _d = props.borderRadius, borderRadius = _d === void 0 ? 0 : _d, onClick = props.onClick, onMouseOver = props.onMouseOver, gridTemplateColumns = props.gridTemplateColumns, ref = props.ref, boxSahdow = props.boxSahdow;
-    return ((0, jsx_runtime_1.jsx)(BoxWrapper, __assign({ "$flexDirection": flexDirection, "$gap": gap, "$justifyContent": justifyContent, "$alignItems": alignItems, "$padding": padding, "$width": width, "$height": height, "$display": display, "$overflow": overflow, "$backgroundColor": backgroundColor, "$border": border, "$borderRadius": borderRadius, "$gridTemplateColumns": gridTemplateColumns, "$boxSahdow": boxSahdow, onClick: onClick, onMouseOver: onMouseOver, ref: ref }, { children: children })));
-};
-exports.default = Box;
 var BoxWrapper = styled_components_1.styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: ", ";\n  height: ", ";\n  display: ", ";\n  flex-direction: ", ";\n  justify-content: ", ";\n  align-items: ", ";\n  padding: ", ";\n  gap: ", ";\n  overflow: ", ";\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  grid-template-columns: ", ";\n  box-shadow: ", ";\n  word-break: break-all;\n"], ["\n  width: ", ";\n  height: ", ";\n  display: ", ";\n  flex-direction: ", ";\n  justify-content: ", ";\n  align-items: ", ";\n  padding: ", ";\n  gap: ", ";\n  overflow: ", ";\n  background-color: ", ";\n  border: ", ";\n  border-radius: ", ";\n  grid-template-columns: ", ";\n  box-shadow: ", ";\n  word-break: break-all;\n"])), function (_a) {
     var $width = _a.$width;
     return typeof $width === "string" ? $width : "".concat($width, "px ");
@@ -65,4 +60,9 @@ var BoxWrapper = styled_components_1.styled.div(templateObject_1 || (templateObj
     var $boxSahdow = _a.$boxSahdow;
     return $boxSahdow;
 });
+var Box = function (props) {
+    var children = props.children, flexDirection = props.flexDirection, _a = props.gap, gap = _a === void 0 ? 0 : _a, justifyContent = props.justifyContent, alignItems = props.alignItems, _b = props.padding, padding = _b === void 0 ? 0 : _b, width = props.width, _c = props.height, height = _c === void 0 ? "100%" : _c, display = props.display, overflow = props.overflow, backgroundColor = props.backgroundColor, border = props.border, _d = props.borderRadius, borderRadius = _d === void 0 ? 0 : _d, onClick = props.onClick, onMouseOver = props.onMouseOver, gridTemplateColumns = props.gridTemplateColumns, ref = props.ref, boxSahdow = props.boxSahdow;
+    return ((0, jsx_runtime_1.jsx)(BoxWrapper, __assign({ "$flexDirection": flexDirection, "$gap": gap, "$justifyContent": justifyContent, "$alignItems": alignItems, "$padding": padding, "$width": width, "$height": height, "$display": display, "$overflow": overflow, "$backgroundColor": backgroundColor, "$border": border, "$borderRadius": borderRadius, "$gridTemplateColumns": gridTemplateColumns, "$boxSahdow": boxSahdow, onClick: onClick, onMouseOver: onMouseOver, ref: ref }, { children: children })));
+};
+exports.default = Box;
 var templateObject_1;

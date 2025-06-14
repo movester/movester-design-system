@@ -1,4 +1,4 @@
-import Box from "./Box";
+import Box from "./Box/Box.web";
 import Typography from "./Typography";
 import { PropsWithChildren } from "react";
 import { colors } from "../constants/style";

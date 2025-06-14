@@ -19,6 +19,7 @@
     "typeRoots": ["index.d.ts", "node_modules/@types"],
     "declaration": true
   },
-  "include": ["./src/lib/*.tsx", "./src/lib/*.ts"],
+  // "include": ["./src/lib/*.tsx", "./src/lib/*.ts", "src/lib/**/*"],
+  "include": ["src/lib/**/*"],
   "exclude": ["node_modules"]
 }

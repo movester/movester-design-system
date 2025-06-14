@@ -39,6 +39,27 @@ interface IBox {
   $boxSahdow?: string;
 }
 
+const BoxWrapper = styled.div<IBox>`
+  width: ${({ $width }) =>
+    typeof $width === "string" ? $width : `${$width}px `};
+  height: ${({ $height }) =>
+    typeof $height === "string" ? $height : `${$height}px `};
+  display: ${({ $display }) => $display};
+  flex-direction: ${({ $flexDirection }) => $flexDirection};
+  justify-content: ${({ $justifyContent }) => $justifyContent};
+  align-items: ${({ $alignItems }) => $alignItems};
+  padding: ${({ $padding }) =>
+    typeof $padding === "string" ? $padding : `${$padding}px `};
+  gap: ${({ $gap }) => `${$gap}px`};
+  overflow: ${({ $overflow }) => $overflow};
+  background-color: ${({ $backgroundColor }) => $backgroundColor};
+  border: ${({ $border }) => $border};
+  border-radius: ${({ $borderRadius }) => `${$borderRadius}px`};
+  grid-template-columns: ${({ $gridTemplateColumns }) => $gridTemplateColumns};
+  box-shadow: ${({ $boxSahdow }) => $boxSahdow};
+  word-break: break-all;
+`;
+
 const Box = (props: PropsWithChildren<IProps>) => {
   const {
     children,
@@ -87,24 +108,3 @@ const Box = (props: PropsWithChildren<IProps>) => {
 };
 
 export default Box;
-
-const BoxWrapper = styled.div<IBox>`
-  width: ${({ $width }) =>
-    typeof $width === "string" ? $width : `${$width}px `};
-  height: ${({ $height }) =>
-    typeof $height === "string" ? $height : `${$height}px `};
-  display: ${({ $display }) => $display};
-  flex-direction: ${({ $flexDirection }) => $flexDirection};
-  justify-content: ${({ $justifyContent }) => $justifyContent};
-  align-items: ${({ $alignItems }) => $alignItems};
-  padding: ${({ $padding }) =>
-    typeof $padding === "string" ? $padding : `${$padding}px `};
-  gap: ${({ $gap }) => `${$gap}px`};
-  overflow: ${({ $overflow }) => $overflow};
-  background-color: ${({ $backgroundColor }) => $backgroundColor};
-  border: ${({ $border }) => $border};
-  border-radius: ${({ $borderRadius }) => `${$borderRadius}px`};
-  grid-template-columns: ${({ $gridTemplateColumns }) => $gridTemplateColumns};
-  box-shadow: ${({ $boxSahdow }) => $boxSahdow};
-  word-break: break-all;
-`;

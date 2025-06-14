@@ -15,7 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var jsx_runtime_1 = require("react/jsx-runtime");
-var Box_1 = __importDefault(require("./Box"));
+var Box_web_1 = __importDefault(require("./Box/Box.web"));
 var Typography_1 = __importDefault(require("./Typography"));
 var style_1 = require("../constants/style");
 var sizeProps = {
@@ -36,6 +36,6 @@ var variantsProps = {
 };
 var Chip = function (props) {
     var children = props.children, _a = props.variants, variants = _a === void 0 ? "primary" : _a, _b = props.size, size = _b === void 0 ? "md" : _b;
-    return ((0, jsx_runtime_1.jsx)(Box_1.default, __assign({ backgroundColor: variantsProps[variants].backgroundColor, border: variantsProps[variants].border, width: "fit-content", height: sizeProps[size].height, borderRadius: sizeProps[size].borderRadius, padding: sizeProps[size].padding, display: "flex", alignItems: "center", justifyContent: "center", boxSahdow: "4px 4px 4px rgba(0,0,0,0.1)" }, { children: (0, jsx_runtime_1.jsx)(Typography_1.default, __assign({ variants: size === "md" ? "heading3" : "body2", color: variantsProps[variants].color }, { children: children })) })));
+    return ((0, jsx_runtime_1.jsx)(Box_web_1.default, __assign({ backgroundColor: variantsProps[variants].backgroundColor, border: variantsProps[variants].border, width: "fit-content", height: sizeProps[size].height, borderRadius: sizeProps[size].borderRadius, padding: sizeProps[size].padding, display: "flex", alignItems: "center", justifyContent: "center", boxSahdow: "4px 4px 4px rgba(0,0,0,0.1)" }, { children: (0, jsx_runtime_1.jsx)(Typography_1.default, __assign({ variants: size === "md" ? "heading3" : "body2", color: variantsProps[variants].color }, { children: children })) })));
 };
 exports.default = Chip;
